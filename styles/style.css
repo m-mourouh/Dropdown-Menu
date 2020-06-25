@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family:  Helvetica, sans-serif
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container .logo {
+  padding: 10px 20px;
+}
+
+.nav-container .logo a {
+  text-decoration: none;
+  color: #08153d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-container .logo a:hover {
+  color: deeppink;
+}
+
+.nav-container .nav {
+  margin-right: 20px;
+}
+
+.nav-container .nav .menu {
+  display: flex;
+}
+
+.nav-container .nav .menu li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #08153d;
+  transition: 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.nav-container .nav .menu li a:hover {
+  color: deeppink;
+}
+.nav-container .nav .menu li a .arrow-down {
+  border: solid #08153d;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg) translateY(-5px);
+}
+
+
+.nav-container .nav .menu li a:hover .arrow-down {
+  border-color: deeppink;
+}
+
+.nav-container .nav .menu li #submenu {
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 5px;
+  min-width: 255px;
+  display: none;
+  position: absolute;
+  bottom: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+.nav-container .nav .menu li #submenu li a {
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  color: #08153d;
+}
+
+.nav-container .nav .menu li #submenu li a:hover {
+  color: deeppink;
+}
+
+.nav-container .nav .menu li #submenu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: #08153d transparent;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  width: 0;
+  height: 0;
+}
+
+.nav-container .nav .menu .services {
+  position: relative;
+}
+
+.nav-container .nav .menu .services:hover #submenu {
+  display: block;
+}
+
+.nav-container .nav .menu .downloads {
+  position: relative;
+}
+
+.nav-container .nav .menu .downloads:hover #submenu {
+  display: block;
+}
